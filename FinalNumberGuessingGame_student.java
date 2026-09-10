@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class FinalNumberGuessingGame_student {
     public static void main(String[] args) {
