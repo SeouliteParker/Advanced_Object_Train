@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class FinalStudentScoreStatistics_student {
     public static void main(String[] args) {
@@ -8,14 +9,14 @@ public class FinalStudentScoreStatistics_student {
         int studentCount = scanner.nextInt();
 
         if (studentCount <= 0) {
-            System.out.println("1명 이상 입력하세요.");
+            System.out.println("1명이상 입력하세요.");
         } else {
             int validCount = 0;
             int totalScore = 0;
 
             // TODO 1: 점수 범위를 생각해 최고점과 최저점의 초기값을 정한다.
             int maxScore = 0;
-            int minScore = 0;
+            int minScore = 100;
 
             int aCount = 0;
             int bCount = 0;
@@ -24,49 +25,49 @@ public class FinalStudentScoreStatistics_student {
             int fCount = 0;
 
             // TODO 2: 필요한 점수를 모두 입력할 때까지 반복하는 조건을 작성한다.
-            while (validCount < 0) {
+            while (validCount < studentCount) {
                 // TODO 3: 화면에 보여줄 학생 번호를 계산한다.
-                int number = 0;
+                int number = validCount + 1;
                 System.out.print(number + "번 점수: ");
                 int score = scanner.nextInt();
 
                 // TODO 4: 점수로 인정할 수 없는 입력을 걸러내는 조건을 작성한다.
-                if (false) {
+                if (score < 0 || score > 100) {
                     System.out.println("0~100만 입력하세요.");
                     continue;
                 }
 
                 // TODO 5: 이번 점수를 기존 합계에 반영한다.
-                totalScore += 0;
+                totalScore += score;
 
                 // TODO 6: 최고점과 최저점을 바꿔야 하는 조건을 각각 작성한다.
-                if (false) {
+                if (score > maxScore) {
                     maxScore = score;
                 }
 
-                if (false) {
+                if (score < minScore) {
                     minScore = score;
                 }
 
                 // TODO 7: 위에 제시된 등급 기준을 if-else if 조건으로 작성한다.
-                if (false) {
+                if (score >= 90) {
                     aCount++;
-                } else if (false) {
+                } else if (score >= 80) {
                     bCount++;
-                } else if (false) {
+                } else if (score >= 70) {
                     cCount++;
-                } else if (false) {
+                } else if (score >= 60) {
                     dCount++;
                 } else {
                     fCount++;
                 }
 
                 // TODO 8: 정상 점수 한 개의 처리가 끝났음을 반영한다.
-                validCount += 0;
+                validCount++;
             }
 
             // TODO 9: 소수점이 사라지지 않도록 평균을 계산한다.
-            double average = 0.0;
+            double average = (double) totalScore / validCount;
 
             System.out.println("\n===== 통계 결과 =====");
             System.out.println("합계: " + totalScore);
