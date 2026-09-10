@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FinalOrderKiosk_student {
+public class FinalOrderKiosk{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
