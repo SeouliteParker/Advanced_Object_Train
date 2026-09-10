@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FinalStudentScoreStatistics_student {
+public class FinalStudentScoreStatistics {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FinalNumberGuessingGame_student {
+public class FinalNumberGuessingGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
